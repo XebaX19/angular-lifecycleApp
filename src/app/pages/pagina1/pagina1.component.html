@@ -1,0 +1,21 @@
+<p>pagina1 works!</p>
+
+<input type="text"
+       placeholder="Hola mundo!"
+       [(ngModel)]="nombre"> 
+       <!-- Al bindear el input con un ngModel, dispara automáticamente el ngDoCheck, ngAfterContentChecked y ngAfterViewChecked
+       cada vez que presiono una tecla, o también si pierde el foco el input -->
+
+<button (click)="guardar()">
+    Dispara ngDoCheck, ngAfterContentChecked y ngAfterViewChecked 
+</button>
+
+<div>
+    <span>{{ nombre }}</span>
+</div>
+
+<br><br>
+
+<app-muestra-nombre [nombre]="nombre"></app-muestra-nombre>
+
+<h1>Segundos: {{ segundos }}</h1>
